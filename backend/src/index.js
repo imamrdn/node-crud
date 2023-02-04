@@ -5,6 +5,7 @@ const middlewareLogRequest = require('./middlewares/logs')
 const app = express()
 
 app.use(middlewareLogRequest)
+app.use(express.json())
 
 //app.method(path, handler)
 app.use('/users', usersRouters)

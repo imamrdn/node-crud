@@ -5,8 +5,10 @@ const getAllUsers = (req, res) => {
 }
 
 const createNewUser = (req, res) => {
+    console.log(req.body)
     res.json({
-        message: "POST all users success"
+        message: "POST all users success",
+        data: req.body
     })
 }
 

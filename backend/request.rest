@@ -3,3 +3,11 @@ GET http://localhost:5000/users
 
 ###
 POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name" : "Imam Ramadhan",
+    "email" : "imam@gmail.com",
+    "password" : "123456",
+    "confirmPassword" : "123456"
+}
