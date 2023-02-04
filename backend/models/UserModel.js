@@ -3,15 +3,21 @@ import db from "../config/Database.js"
 
 const { DataTypes } = Sequelize
 
-const User = db.define('users', {
-    name: DataTypes.STRING,
-    email: DataTypes.STRING,
-    gender: DataTypes.STRING
+const Users = db.define('users', {
+    name: {
+        type: DataTypes.STRING
+    },
+    email: {
+        type: DataTypes.STRING
+    },
+    genders: {
+        type: DataTypes.STRING
+    }
 }, {
     freezeTableName: true
 })
 
-export default User
+export default Users
 
 ( async ()=> {
     await db.sync()
