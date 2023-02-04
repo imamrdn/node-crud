@@ -7,7 +7,14 @@ Content-Type: application/json
 
 {
     "name" : "Imam Ramadhan",
-    "email" : "imam@gmail.com",
-    "password" : "123456",
-    "confirmPassword" : "123456"
+    "email" : "imam@gmail.com"
+}
+
+###
+PATCH http://localhost:5000/users/1
+Content-Type: application/json
+
+{
+    "name" : "Imam Ramadhan",
+    "email" : "imam@gmail.com"
 }
