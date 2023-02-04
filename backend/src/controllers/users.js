@@ -21,15 +21,29 @@ const createNewUser = (req, res) => {
 
 const updateUser = (req, res) => {
     const { id } = req.params
-    console.log('id user : ', id)
+    console.log('id user: ', id)
     res.json({
         message: "Update user success",
         data: req.body
     })
 }
 
+const deleteUser = (req, res) => {
+    const { id } = req.params
+    console.log('id user: ', id)
+    res.json({
+        message: "Delete user success",
+        data: {
+            id: id,
+            name: "imam ramadhan",
+            email: "imam@gmail.com"
+        }
+    })
+}
+
 module.exports = {
     getAllUsers,
     createNewUser,
-    updateUser
+    updateUser,
+    deleteUser
 }
