@@ -6,8 +6,9 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name" : "Imam Ramadhan",
-    "email" : "imam@gmail.com"
+    "name" : "adit",
+    "email" : "adit@gmail.com",
+    "address" : "jombang"
 }
 
 ###

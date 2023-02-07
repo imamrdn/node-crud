@@ -17,12 +17,23 @@ const getAllUsers = async (req, res) => {
 
 }
 
-const createNewUser = (req, res) => {
-    console.log(req.body)
-    res.json({
-        message: "POST all users success",
-        data: req.body
-    })
+const createUser = async (req, res) => {
+    const {body} = req
+
+    try {
+        await usersModel.createUser(body)
+        res.json({
+            message: "Create user success",
+            data: body
+        })
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({
+            message: "Server Error",
+            serverMessage: error
+        })
+    }
+
 }
 
 const updateUser = (req, res) => {
@@ -49,7 +60,7 @@ const deleteUser = (req, res) => {
 
 module.exports = {
     getAllUsers,
-    createNewUser,
+    createUser,
     updateUser,
     deleteUser
 }
